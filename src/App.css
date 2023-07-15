@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.world-clock {
+  display: flex;
+  margin: 20px;
+  gap: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.world-clock__label {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.world-clock__input {
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.world-clock__btn-add {
+  align-self: flex-end;
+  padding: 5px 20px;
+}
+
+.world-clock-list {
+  display: flex;
+  margin: 20px;
+  gap: 30px;
+}
+
+.world-clock-list__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  padding: 20px;
+  gap: 10px;
+  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.world-clock-list__item-clock {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.world-clock-list__item-delete {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
